@@ -59,6 +59,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/lhPromoCode"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
@@ -118,6 +119,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tvCheckout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"

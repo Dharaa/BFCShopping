@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.bfcfashion">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BFCFashion">
-        <activity android:name=".module.activity.SettingsActivity"></activity>
+        android:theme="@style/Theme.BFCFashion"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup"
+        tools:targetApi="m">
+        <activity android:name=".module.activity.ProductDetailsActivity"></activity>
+        <activity android:name=".module.activity.FiltersActivity" />
+        <activity android:name=".module.activity.SuccessActivity" />
+        <activity android:name=".module.activity.AddingShippingAddressActivity" />
+        <activity android:name=".module.activity.ShippingAddressesActivity" />
+        <activity android:name=".module.activity.CheckOutActivity" />
+        <activity android:name=".module.activity.SettingsActivity" />
         <activity android:name=".common.MainActivity" />
         <activity android:name=".auth.ForgotPasswordActivity" />
         <activity android:name=".common.SplashActivity" />

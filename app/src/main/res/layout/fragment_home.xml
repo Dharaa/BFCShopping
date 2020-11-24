@@ -38,27 +38,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <androidx.viewpager2.widget.ViewPager2
-                        android:id="@+id/viewPager"
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/slider"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:orientation="horizontal" />
+                        android:layout_height="200dp" />
 
-                    <LinearLayout
-                        android:id="@+id/layoutSliderIndicators"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="24dp"
-                        android:background="@drawable/slider_bg"
-                        android:gravity="center|center_horizontal"
-                        android:orientation="horizontal"
-                        android:paddingStart="5dp"
-                        android:paddingTop="5dp"
-                        android:paddingEnd="5dp"
-                        android:paddingBottom="5dp" />
+
                 </FrameLayout>
 
                 <LinearLayout
@@ -107,10 +92,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-                    android:layout_marginTop="16dp"
-                    android:background="#FFFFFF"
-
+                    android:layout_marginTop="60dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -143,7 +125,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="60dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -180,7 +162,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp" />
+                    android:layout_marginEnd="16dp"
+                    android:elevation="10dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -412,6 +395,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
                         android:orientation="horizontal">
 
                         <ImageView

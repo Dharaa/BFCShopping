@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="16dp"
+    android:id="@+id/lvTrendingItem"
     android:orientation="vertical">
 
     <FrameLayout
@@ -45,21 +46,21 @@
             android:textSize="11dp" />
 
         <LinearLayout
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="65dp"
             android:background="@drawable/fav_button_bg"
-            android:elevation="5dp"
+            android:elevation="10dp"
             android:gravity="center"
             android:padding="10dp"
 
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_fav_unselected" />
+                android:layout_width="12dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_favorite_border" />
         </LinearLayout>
 
         <LinearLayout
@@ -83,8 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:isIndicator="false"
-                    android:numStars="5"
-                    android:rating="5" />
+                    android:numStars="5" />
 
                 <TextView
                     android:id="@+id/tvRatingCount"

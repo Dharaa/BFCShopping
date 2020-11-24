@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -14,10 +15,13 @@ import com.example.bfcfashion.module.fragment.adapter.ShopPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class ShopFragment extends Fragment {
+public class ShopFragment extends Fragment implements View.OnClickListener {
     private View view;
     private ViewPager2 shopViewPager;
     private TabLayout tabLayout;
+    private ImageView ivSearch;
+    private Fragment fragment = null;
+
 
     public ShopFragment() {
         // Required empty public constructor
@@ -34,6 +38,8 @@ public class ShopFragment extends Fragment {
     private void initViews() {
         shopViewPager = view.findViewById(R.id.shopViewPager);
         tabLayout = view.findViewById(R.id.tabLayout);
+        ivSearch = view.findViewById(R.id.ivSearch);
+
         shopViewPager.setAdapter(new ShopPagerAdapter(getActivity()));
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(
                 tabLayout, shopViewPager, new TabLayoutMediator.TabConfigurationStrategy() {
@@ -58,5 +64,32 @@ public class ShopFragment extends Fragment {
         }
         );
         tabLayoutMediator.attach();
+
+        ivSearch.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == ivSearch) {
+            openSearchFragment();
+        }
+    }
+
+    private void openSearchFragment() {
+        fragment = new SearchFragment();
+        loadFragment(fragment);
+    }
+
+    private boolean loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.mainContent, fragment)
+                    .addToBackStack(null)
+                    .commit();
+            return true;
+        }
+
+        return false;
     }
 }

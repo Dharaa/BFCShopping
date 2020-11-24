@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background"
+    android:orientation="vertical"
     tools:context=".auth.SignUpActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -52,6 +53,7 @@
                     android:textSize="11dp" />
 
                 <EditText
+                    android:id="@+id/etFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -60,8 +62,9 @@
                     android:drawableEnd="@drawable/check"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/metropoli_medium"
+                    android:hint="Jphn Doe"
+                    android:inputType="textPersonName"
                     android:paddingEnd="10dp"
-                    android:text="Vipin Thakur"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -84,6 +87,7 @@
                     android:textSize="11sp" />
 
                 <EditText
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -91,8 +95,9 @@
                     android:background="@null"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/metropoli_medium"
+                    android:hint="xyz@gmail.com"
+                    android:inputType="textEmailAddress"
                     android:paddingEnd="10dp"
-                    android:text="Vipin12Thakur@gmail.com"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -109,6 +114,7 @@
 
 
                 <EditText
+                    android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -117,6 +123,7 @@
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/metropoli_medium"
                     android:hint="Password"
+                    android:inputType="textPassword"
                     android:paddingEnd="10dp"
                     android:textSize="14sp" />
             </LinearLayout>

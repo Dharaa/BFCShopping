@@ -7,52 +7,48 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.widget.ViewPager2;
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.bfcfashion.R;
 import com.example.bfcfashion.module.model.SliderItem;
 
 import java.util.List;
 
-public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderViewHolder> {
-    private Context context;
-    private List<SliderItem> sliderItemList;
-    private ViewPager2 viewPager2;
+public class SliderAdapter extends PagerAdapter {
+    List<SliderItem> sliderItems;
+    Context context;
 
-    public SliderAdapter(Context context, List<SliderItem> sliderItemList, ViewPager2 viewPager2) {
+    public SliderAdapter(List<SliderItem> sliderItems, Context context) {
+        this.sliderItems = sliderItems;
         this.context = context;
-        this.sliderItemList = sliderItemList;
-        this.viewPager2 = viewPager2;
+    }
+
+    @Override
+    public int getCount() {
+        return sliderItems.size();
     }
 
     @NonNull
     @Override
-    public SliderAdapter.SliderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.list_item_discover_banner, parent, false);
-        return new SliderViewHolder(view);
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.list_item_discover_banner, null);
+        ImageView image = view.findViewById(R.id.ivSliderPhoto);
+        image.setImageResource(sliderItems.get(position).getImageUrl());
+
+
+        container.addView(view);
+        return view;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SliderAdapter.SliderViewHolder holder, int position) {
-        holder.ivSliderPhoto.setImageResource(sliderItemList.get(position).getImageUrl());
-
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+        return view == object;
     }
 
     @Override
-    public int getItemCount() {
-        return sliderItemList.size();
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView((View) object);
     }
-
-    public class SliderViewHolder extends RecyclerView.ViewHolder {
-        private ImageView ivSliderPhoto;
-
-        public SliderViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            ivSliderPhoto = itemView.findViewById(R.id.ivSliderPhoto);
-        }
-    }
-
-
 }

@@ -35,7 +35,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         );
         View bottomSheetView = LayoutInflater.from(getApplicationContext())
                 .inflate(
-                        R.layout.layout_bottom_sheet,
+                        R.layout.layout_password_bottom_sheet,
                         (LinearLayout) findViewById(R.id.bottomSheetContainer)
                 );
         bottomSheetView.findViewById(R.id.etOldPassword);
