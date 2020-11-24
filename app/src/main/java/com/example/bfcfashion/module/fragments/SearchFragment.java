@@ -159,4 +159,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         Intent intent = new Intent(getActivity(), FiltersActivity.class);
         getContext().startActivity(intent);
     }
+
+    //commenting for push
 }
