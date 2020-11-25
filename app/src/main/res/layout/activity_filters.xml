@@ -381,6 +381,50 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/lvBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/metropolis_semi_bold"
+                        android:text="Brand"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/metropolis_regular"
+                        android:text="adidas Originals, Jack &amp; Jones, s.Oliver"
+                        android:textColor="@color/grey"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_right" />
+
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

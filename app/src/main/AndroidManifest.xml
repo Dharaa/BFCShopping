@@ -16,7 +16,8 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup"
         tools:targetApi="m">
-        <activity android:name=".module.activity.ProductDetailsActivity"></activity>
+        <activity android:name=".module.activity.BrandActivity"></activity>
+        <activity android:name=".module.activity.ProductDetailsActivity" />
         <activity android:name=".module.activity.FiltersActivity" />
         <activity android:name=".module.activity.SuccessActivity" />
         <activity android:name=".module.activity.AddingShippingAddressActivity" />
