@@ -23,7 +23,7 @@
                 android:layout_gravity="center_vertical|start"
                 android:layout_marginStart="16dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/back" />
+                android:src="@drawable/ic_new_back" />
 
             <TextView
                 android:id="@+id/tvName"
@@ -32,7 +32,6 @@
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:gravity="center"
                 android:text="Short dress"
-
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -350,7 +349,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/button_bg"
-            android:elevation="15dp"
+            android:elevation="20dp"
             android:fontFamily="@font/metropoli_medium"
             android:gravity="center"
             android:text="ADD TO CART"

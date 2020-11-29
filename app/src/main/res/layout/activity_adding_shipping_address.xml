@@ -25,7 +25,7 @@
                 android:layout_gravity="center_vertical|start"
                 android:layout_marginStart="16dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/back" />
+                android:src="@drawable/ic_new_back" />
 
             <TextView
                 android:id="@+id/tvName"

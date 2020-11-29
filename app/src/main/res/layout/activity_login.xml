@@ -22,7 +22,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/back" />
+                android:src="@drawable/ic_new_back" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -148,12 +148,12 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/google"></ImageView>
+                    android:src="@drawable/ic_google"></ImageView>
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/facebook"></ImageView>
+                    android:src="@drawable/ic_facebook"></ImageView>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

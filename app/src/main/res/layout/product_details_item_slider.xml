@@ -8,5 +8,6 @@
         android:id="@+id/ivDetails"
         android:layout_width="275dp"
         android:layout_height="413dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/details_one" />
 </LinearLayout>

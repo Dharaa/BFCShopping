@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.bfcfashion.R;
 import com.example.bfcfashion.module.fragment.adapter.DealsAdapter;
 import com.example.bfcfashion.module.fragment.adapter.HomeAdapter;
@@ -43,6 +46,8 @@ public class HomeFragment extends Fragment {
     private RecyclerView kidsRecyclerView;
     private HomeAdapter homeAdapter;
     private View view;
+
+    private ImageSlider slider;
 
     private Timer sliderTimer;
     private TrendingAdapter trendingAdapter;
@@ -83,24 +88,23 @@ public class HomeFragment extends Fragment {
         womenRecyclerView = view.findViewById(R.id.womenRecyclerView);
         kidsRecyclerView = view.findViewById(R.id.kidsRecyclerView);
 
-        viewPager = view.findViewById(R.id.slider);
-
+        slider = view.findViewById(R.id.slider);
 
         sliderItemList = new ArrayList<>();
 //        viewPager = view.findViewById(R.id.viewPager);
 //
 //        layoutSliderIndicators = view.findViewById(R.id.layoutSliderIndicators);
 
-        sliderItemList.add(new SliderItem(R.drawable.image_slider));
-        sliderItemList.add(new SliderItem(R.drawable.image_slider));
-        sliderItemList.add(new SliderItem(R.drawable.image_slider));
-        sliderItemList.add(new SliderItem(R.drawable.image_slider));
-        sliderItemList.add(new SliderItem(R.drawable.image_slider));
-        sliderItemList.add(new SliderItem(R.drawable.image_slider));
-        sliderItemList.add(new SliderItem(R.drawable.image_slider));
+        List<SlideModel> sliderItems = new ArrayList<>();
+        sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
+        sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
+        sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
+        sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
+        sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
+        sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
+        sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
 
-        adapter = new SliderAdapter(sliderItemList, getContext());
-        viewPager.setAdapter(adapter);
+        slider.setImageList(sliderItems, ScaleTypes.FIT);
 
 //        Timer timer = new Timer();
 //        timer.schedule(new sliderTimer(), 4000, 6000);

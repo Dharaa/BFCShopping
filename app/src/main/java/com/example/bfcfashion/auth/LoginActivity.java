@@ -57,7 +57,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             goToForgotPasswordActivity();
         }
         if (v == tvLogin) {
-            doUIValidation();
+            //  doUIValidation();
+            goToLogin();
         }
 
     }
@@ -118,9 +119,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void goToLogin() {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        Banner.make(rootview, getBaseContext(), Banner.SUCCESS, "Login Successful", Banner.BOTTOM, 2000).show();
+        //Banner.make(rootview, getBaseContext(), Banner.SUCCESS, "Login Successful", Banner.BOTTOM, 2000).show();
         startActivity(intent);
-        finish();
+        // finish();
     }
 
     private void goToForgotPasswordActivity() {

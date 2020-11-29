@@ -58,7 +58,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             goToLoginScreen();
         }
         if (v == tvSignUp) {
-            doUIValidation();
+//            doUIValidation();
+            goToLoginScreen();
         }
 
     }
