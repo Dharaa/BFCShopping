@@ -122,7 +122,7 @@
         </LinearLayout>
 
 
-        <ScrollView
+        <!--<ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -130,17 +130,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:elevation="20dp"
-                android:orientation="vertical">
+                android:orientation="vertical">-->
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/favRecyclerView"
-                    android:layout_width="match_parent"
-                    android:elevation="20dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="16dp" />
-            </LinearLayout>
-        </ScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favRecyclerView"
+            android:layout_width="match_parent"
+            android:elevation="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+        <!-- </LinearLayout>
+     </ScrollView>-->
     </LinearLayout>
 
 </FrameLayout>

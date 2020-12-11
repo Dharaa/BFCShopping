@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.bfcfashion.R;
 
 public class CheckOutActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView tvSubmitOrder;
+    private TextView tvSubmitOrder, mTvChangeAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +22,15 @@ public class CheckOutActivity extends AppCompatActivity implements View.OnClickL
 
     private void initViews() {
         tvSubmitOrder = findViewById(R.id.tvSubmitOrder);
+        mTvChangeAddress = findViewById(R.id.mTvChangeAddress);
 
         tvSubmitOrder.setOnClickListener(this);
+        mTvChangeAddress.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v == tvSubmitOrder) {
+        if (v == mTvChangeAddress) {
             goToSubmitOrder();
         }
     }

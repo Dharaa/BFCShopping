@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,18 +13,20 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="8dp"
-            android:elevation="10dp"
+            android:layout_height="@dimen/_110sdp"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/_5sdp"
             android:scaleType="centerCrop"
             android:src="@drawable/dynamic_banner" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:nestedScrollingEnabled="false"
             android:id="@+id/womenShopRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:orientation="vertical" />
     </LinearLayout>
 
-</FrameLayout>
+</androidx.core.widget.NestedScrollView>

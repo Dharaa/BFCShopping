@@ -104,7 +104,7 @@ public class HomeFragment extends Fragment {
         sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
         sliderItems.add(new SlideModel(R.drawable.image_slider, ScaleTypes.FIT));
 
-        slider.setImageList(sliderItems, ScaleTypes.FIT);
+        slider.setImageList(sliderItems, ScaleTypes.CENTER_CROP);
 
 //        Timer timer = new Timer();
 //        timer.schedule(new sliderTimer(), 4000, 6000);

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.bfcfashion"
+        applicationId "com.bfc.fashion"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -54,5 +54,6 @@ dependencies {
 
     //imageslider
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
 }
