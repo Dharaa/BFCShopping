@@ -3,6 +3,7 @@ package com.example.bfcfashion.auth;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.ArrayMap;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -15,10 +16,15 @@ import com.example.bfcfashion.R;
 import com.example.bfcfashion.api.ApiClient;
 import com.example.bfcfashion.api.Auth;
 import com.example.bfcfashion.auth.model.LoginDetail;
-import com.example.bfcfashion.auth.model.LoginResponse;
 import com.example.bfcfashion.common.MainActivity;
+import com.example.bfcfashion.module.model.login.LoginResponse;
 import com.shasin.notificationbanner.Banner;
 
+import org.json.JSONObject;
+
+import java.util.Map;
+
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -57,8 +63,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             goToForgotPasswordActivity();
         }
         if (v == tvLogin) {
-            //  doUIValidation();
-            goToLogin();
+            doUIValidation();
+//            goToLogin();
         }
 
     }
@@ -93,17 +99,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Auth auth = ApiClient.getRetrofitInstance().create(Auth.class);
         LoginDetail loginDetail = new LoginDetail(email, password);
-        Call<LoginResponse> call = auth.doLogin(loginDetail);
+        Map<String, Object> jsonObjectLogin = new ArrayMap<>();
+        jsonObjectLogin.put("type_id", "1");
+        jsonObjectLogin.put("mobile_email", email);
+        jsonObjectLogin.put("password", password);
+        jsonObjectLogin.put("device_id", "1");
+        jsonObjectLogin.put("ip_address", "192.168.0.1");
+        RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
+                (new JSONObject(jsonObjectLogin)).toString());
+
+        Call<LoginResponse> call = auth.doLogin("WAq+1EQS1fke69TTQz3C22KAVBwxiAcpQudOr4DVpeI=",
+                body);
         call.enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                Log.e(TAG, "onResponse: " + response.code() + " " + response.body().getMessage());
-                if (response.body().getStatus() == 200) {
-                    Log.e(TAG, "onResponse: " + "User Found");
-                    goToLogin();
-                } else if (response.body().getStatus() == 201) {
+                Log.e(TAG, "onResponse: " + response.code() + " " + response.body().getMsg());
+                if (response.body().isError()) {
                     Log.e(TAG, "onResponse: Invalid username or password");
                     Banner.make(rootview, getBaseContext(), Banner.ERROR, "Invalid username or password", Banner.BOTTOM, 2000).show();
+                } else if (!response.body().isError()) {
+                    Log.e(TAG, "onResponse: " + "User Found");
+                    goToLogin();
                 } else {
                     Log.e(TAG, "onResponse: Something went wrong");
                 }
@@ -119,7 +135,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void goToLogin() {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        //Banner.make(rootview, getBaseContext(), Banner.SUCCESS, "Login Successful", Banner.BOTTOM, 2000).show();
+        Banner.make(rootview, getBaseContext(), Banner.SUCCESS, "Login Successful", Banner.BOTTOM, 2000).show();
         startActivity(intent);
         // finish();
     }
