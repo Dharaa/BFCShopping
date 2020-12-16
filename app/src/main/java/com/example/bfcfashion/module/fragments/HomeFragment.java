@@ -1,6 +1,8 @@
 package com.example.bfcfashion.module.fragments;
 
 import android.os.Bundle;
+import android.util.ArrayMap;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,10 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.bfcfashion.R;
+import com.example.bfcfashion.api.ApiClient;
+import com.example.bfcfashion.api.Auth;
+import com.example.bfcfashion.auth.model.CategoryResponse;
+import com.example.bfcfashion.auth.model.LoginDetail;
 import com.example.bfcfashion.module.fragment.adapter.DealsAdapter;
 import com.example.bfcfashion.module.fragment.adapter.HomeAdapter;
 import com.example.bfcfashion.module.fragment.adapter.KidAdapter;
@@ -30,11 +36,21 @@ import com.example.bfcfashion.module.model.NewItem;
 import com.example.bfcfashion.module.model.SliderItem;
 import com.example.bfcfashion.module.model.TrendingItem;
 import com.example.bfcfashion.module.model.WomensItem;
+import com.example.bfcfashion.module.model.login.LoginResponse;
 import com.google.android.material.tabs.TabLayout;
+import com.shasin.notificationbanner.Banner;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Timer;
+
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
     private RecyclerView categoryItemRecyclerView;
@@ -61,11 +77,13 @@ public class HomeFragment extends Fragment {
     private WomenAdapter womenAdapter;
     private List<WomensItem> womensItemList;
     private List<KidItem> kidItemList;
+    List<CategoryItem> categoryItemList;
     private KidAdapter kidAdapter;
     private ViewPager viewPager;
     private TabLayout tabs;
     private List<SliderItem> sliderItemList;
     private SliderAdapter adapter;
+    private static final String TAG = "HomeFragment";
 
     public HomeFragment() {
 
@@ -91,6 +109,7 @@ public class HomeFragment extends Fragment {
         slider = view.findViewById(R.id.slider);
 
         sliderItemList = new ArrayList<>();
+        categoryItemList = new ArrayList<>();
 //        viewPager = view.findViewById(R.id.viewPager);
 //
 //        layoutSliderIndicators = view.findViewById(R.id.layoutSliderIndicators);
@@ -110,12 +129,12 @@ public class HomeFragment extends Fragment {
 //        timer.schedule(new sliderTimer(), 4000, 6000);
 
 
-        List<CategoryItem> categoryItemList = new ArrayList<>();
+        /*List<CategoryItem> categoryItemList = new ArrayList<>();
         categoryItemList.add(new CategoryItem(R.drawable.men, "Men"));
         categoryItemList.add(new CategoryItem(R.drawable.men, "Women"));
         categoryItemList.add(new CategoryItem(R.drawable.men, "Kids"));
         categoryItemList.add(new CategoryItem(R.drawable.men, "Accessories"));
-        setCategoryRecyclerView(categoryItemList);
+        setCategoryRecyclerView(categoryItemList);*/
 
 
         trendingItemList = new ArrayList<>();
@@ -159,7 +178,8 @@ public class HomeFragment extends Fragment {
         kidItemList.add(new KidItem(R.drawable.kids_one, "Pent"));
         setKidsRecyclerView(kidItemList);
 
-
+        /*Get Categories from network call*/
+        getCategories();
     }
 
 
@@ -212,5 +232,39 @@ public class HomeFragment extends Fragment {
         kidAdapter = new KidAdapter(getContext(), kidItems);
         kidsRecyclerView.setAdapter(kidAdapter);
         kidAdapter.notifyDataSetChanged();
+    }
+
+    private void getCategories() {
+        Auth auth = ApiClient.getRetrofitInstance().create(Auth.class);
+        Map<String, Object> jsonObjectCategories = new ArrayMap<>();
+        jsonObjectCategories.put("main_category", 0);
+        jsonObjectCategories.put("device_id", "1");
+        jsonObjectCategories.put("ip_address", "192.168.0.1");
+        RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
+                (new JSONObject(jsonObjectCategories)).toString());
+
+        Call<CategoryResponse> call = auth.getCategories("WAq+1EQS1fke69TTQz3C22KAVBwxiAcpQudOr4DVpeI=", body);
+        call.enqueue(new Callback<CategoryResponse>() {
+            @Override
+            public void onResponse(Call<CategoryResponse> call, Response<CategoryResponse> response) {
+                Log.e(TAG, "onResponse: " + response.code() + " " + response.body().getMsg());
+                if (response.body().isError()) {
+                } else if (!response.body().isError()) {
+                    ArrayList<CategoryItem> list = response.body().getCategoryList();
+                    if (list != null && list.isEmpty()) {
+                        setCategoryRecyclerView(list);
+                    }
+                    Log.e(TAG, "onResponse: " + "Category Data Found");
+                } else {
+                    Log.e(TAG, "onResponse: Something went wrong");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<CategoryResponse> call, Throwable t) {
+                Log.e(TAG, "onFailure: " + t.getMessage());
+            }
+        });
+
     }
 }

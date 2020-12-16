@@ -92,7 +92,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             etPassword.requestFocus();
             return;
         }
-        goToMain(email, password);
+//        goToMain(email, password);
+        goToLogin();
     }
 
     private void goToMain(String email, String password) {
