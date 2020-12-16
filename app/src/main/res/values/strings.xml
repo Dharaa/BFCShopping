@@ -24,6 +24,7 @@
     <string name="pullover">Pullover</string>
     <string name="l">L</string>
     <string name="leave_feedback">Leave Feedback</string>
+    <string name="mobile">Mobile</string>
 
     <array name="initial_slider_values">
         <item>20.0</item>

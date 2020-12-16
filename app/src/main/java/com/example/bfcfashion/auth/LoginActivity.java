@@ -1,5 +1,6 @@
 package com.example.bfcfashion.auth;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -134,10 +135,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    public static void openActivityAndClearPreviousStack(Context context, Class<?> cls) {
+        Intent intent = new Intent(context, cls);
+        clearActivityStack(intent);
+        context.startActivity(intent);
+    }
+
+    private static void clearActivityStack(Intent intent) {
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+    }
+
     private void goToLogin() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         Banner.make(rootview, getBaseContext(), Banner.SUCCESS, "Login Successful", Banner.BOTTOM, 2000).show();
-        startActivity(intent);
+//        startActivity(intent);
+        openActivityAndClearPreviousStack(LoginActivity.this, MainActivity.class);
         // finish();
     }
 
