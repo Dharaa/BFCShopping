@@ -1,8 +1,7 @@
 package com.example.bfcfashion.api;
 
-import com.example.bfcfashion.auth.model.SignUpDetail;
-import com.example.bfcfashion.auth.model.SignUpResponse;
 import com.example.bfcfashion.module.model.login.LoginResponse;
+import com.example.bfcfashion.module.model.signup.SignUpResponse;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -18,6 +17,8 @@ public interface Auth {
     Call<LoginResponse> doLogin(@Header("auth-key") String header,
                                 @Body RequestBody loginDetail);
 
-    @POST("user/register")
-    Call<SignUpResponse> doSignUp(@Body SignUpDetail signUpDetail);
+    @Headers({"Content-Type: application/json"})
+    @POST("?service=user-registration&v=2.0&device-type=3.0")
+    Call<SignUpResponse> doSignUp(@Header("auth-key") String header,
+                                  @Body RequestBody loginDetail);
 }
