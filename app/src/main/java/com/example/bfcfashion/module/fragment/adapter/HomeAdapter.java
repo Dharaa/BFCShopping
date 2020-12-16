@@ -11,16 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.bfcfashion.R;
-import com.example.bfcfashion.module.model.CategoryItem;
+import com.example.bfcfashion.module.model.categoryResponse.CatagoriesItem;
 
 import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
     private Context context;
-    private List<CategoryItem> categoryItemList;
+    private List<CatagoriesItem> categoryItemList;
 
-    public HomeAdapter(Context context, List<CategoryItem> categoryItemList) {
+    public HomeAdapter(Context context, List<CatagoriesItem> categoryItemList) {
         this.context = context;
         this.categoryItemList = categoryItemList;
     }
@@ -34,9 +35,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull HomeAdapter.HomeViewHolder holder, int position) {
-        CategoryItem item = categoryItemList.get(position);
-        holder.ivCategory.setImageResource(item.getImageUrl());
-        Glide.with(context).load(item.getImageUrl()).placeholder(R.drawable.placeholder).into(holder.ivCategory);
+        CatagoriesItem item = categoryItemList.get(position);
+//        holder.ivCategory.setImageResource(item.getImage());
+        Glide.with(context).load(item.getSkuUrl())
+                .placeholder(R.drawable.placeholder)
+                .apply(RequestOptions.circleCropTransform())
+                .into(holder.ivCategory);
         holder.tvCategoryName.setText(item.getTitle());
     }
 

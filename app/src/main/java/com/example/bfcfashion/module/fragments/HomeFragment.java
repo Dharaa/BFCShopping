@@ -18,8 +18,6 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.bfcfashion.R;
 import com.example.bfcfashion.api.ApiClient;
 import com.example.bfcfashion.api.Auth;
-import com.example.bfcfashion.auth.model.CategoryResponse;
-import com.example.bfcfashion.auth.model.LoginDetail;
 import com.example.bfcfashion.module.fragment.adapter.DealsAdapter;
 import com.example.bfcfashion.module.fragment.adapter.HomeAdapter;
 import com.example.bfcfashion.module.fragment.adapter.KidAdapter;
@@ -28,7 +26,6 @@ import com.example.bfcfashion.module.fragment.adapter.NewAdapter;
 import com.example.bfcfashion.module.fragment.adapter.SliderAdapter;
 import com.example.bfcfashion.module.fragment.adapter.TrendingAdapter;
 import com.example.bfcfashion.module.fragment.adapter.WomenAdapter;
-import com.example.bfcfashion.module.model.CategoryItem;
 import com.example.bfcfashion.module.model.DealsItem;
 import com.example.bfcfashion.module.model.KidItem;
 import com.example.bfcfashion.module.model.MensItem;
@@ -36,9 +33,9 @@ import com.example.bfcfashion.module.model.NewItem;
 import com.example.bfcfashion.module.model.SliderItem;
 import com.example.bfcfashion.module.model.TrendingItem;
 import com.example.bfcfashion.module.model.WomensItem;
-import com.example.bfcfashion.module.model.login.LoginResponse;
+import com.example.bfcfashion.module.model.categoryResponse.CatagoriesItem;
+import com.example.bfcfashion.module.model.categoryResponse.GetCategoryResponse;
 import com.google.android.material.tabs.TabLayout;
-import com.shasin.notificationbanner.Banner;
 
 import org.json.JSONObject;
 
@@ -77,7 +74,7 @@ public class HomeFragment extends Fragment {
     private WomenAdapter womenAdapter;
     private List<WomensItem> womensItemList;
     private List<KidItem> kidItemList;
-    List<CategoryItem> categoryItemList;
+    List<CatagoriesItem> categoryItemList;
     private KidAdapter kidAdapter;
     private ViewPager viewPager;
     private TabLayout tabs;
@@ -178,12 +175,16 @@ public class HomeFragment extends Fragment {
         kidItemList.add(new KidItem(R.drawable.kids_one, "Pent"));
         setKidsRecyclerView(kidItemList);
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         /*Get Categories from network call*/
         getCategories();
     }
 
-
-    private void setCategoryRecyclerView(List<CategoryItem> categoryItems) {
+    private void setCategoryRecyclerView(List<CatagoriesItem> categoryItems) {
         categoryItemRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         homeAdapter = new HomeAdapter(getContext(), categoryItems);
         categoryItemRecyclerView.setAdapter(homeAdapter);
@@ -243,25 +244,25 @@ public class HomeFragment extends Fragment {
         RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
                 (new JSONObject(jsonObjectCategories)).toString());
 
-        Call<CategoryResponse> call = auth.getCategories("WAq+1EQS1fke69TTQz3C22KAVBwxiAcpQudOr4DVpeI=", body);
-        call.enqueue(new Callback<CategoryResponse>() {
+        Call<GetCategoryResponse> call = auth.getCategories("WAq+1EQS1fke69TTQz3C22KAVBwxiAcpQudOr4DVpeI=", body);
+        call.enqueue(new Callback<GetCategoryResponse>() {
             @Override
-            public void onResponse(Call<CategoryResponse> call, Response<CategoryResponse> response) {
-                Log.e(TAG, "onResponse: " + response.code() + " " + response.body().getMsg());
+            public void onResponse(Call<GetCategoryResponse> call, Response<GetCategoryResponse> response) {
+                Log.d(TAG, "onResponse: " + response.code() + " " + response.body().getMsg());
                 if (response.body().isError()) {
                 } else if (!response.body().isError()) {
-                    ArrayList<CategoryItem> list = response.body().getCategoryList();
-                    if (list != null && list.isEmpty()) {
-                        setCategoryRecyclerView(list);
+                    categoryItemList.addAll(response.body().getCatagories());
+                    if (categoryItemList.size() > 0) {
+                        setCategoryRecyclerView(categoryItemList);
                     }
-                    Log.e(TAG, "onResponse: " + "Category Data Found");
+                    Log.d(TAG, "onResponse: " + "Category Data Found");
                 } else {
-                    Log.e(TAG, "onResponse: Something went wrong");
+                    Log.d(TAG, "onResponse: Something went wrong");
                 }
             }
 
             @Override
-            public void onFailure(Call<CategoryResponse> call, Throwable t) {
+            public void onFailure(Call<GetCategoryResponse> call, Throwable t) {
                 Log.e(TAG, "onFailure: " + t.getMessage());
             }
         });
