@@ -175,13 +175,14 @@ public class HomeFragment extends Fragment {
         kidItemList.add(new KidItem(R.drawable.kids_one, "Pent"));
         setKidsRecyclerView(kidItemList);
 
+        /*Get Categories from network call*/
+        getCategories();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        /*Get Categories from network call*/
-        getCategories();
+
     }
 
     private void setCategoryRecyclerView(List<CatagoriesItem> categoryItems) {

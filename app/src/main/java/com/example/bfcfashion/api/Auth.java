@@ -1,7 +1,5 @@
 package com.example.bfcfashion.api;
 
-import com.example.bfcfashion.auth.model.SignUpDetail;
-import com.example.bfcfashion.auth.model.SignUpResponse;
 import com.example.bfcfashion.module.model.categoryResponse.GetCategoryResponse;
 import com.example.bfcfashion.module.model.login.LoginResponse;
 import com.example.bfcfashion.module.model.signup.SignUpResponse;
