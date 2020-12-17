@@ -83,6 +83,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
+                    android:id="@+id/tvColors"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_gravity="center|center_vertical"
