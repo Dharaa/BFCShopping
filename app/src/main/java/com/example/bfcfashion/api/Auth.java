@@ -13,7 +13,7 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface Auth {
-
+//region
     @Headers({"Content-Type: application/json"})
     @POST("?service=user-login&v=2.0&device-type=3.0")
     Call<LoginResponse> doLogin(@Header("auth-key") String header,
