@@ -18,6 +18,7 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.bfcfashion.R;
 import com.example.bfcfashion.api.ApiClient;
 import com.example.bfcfashion.api.Auth;
+import com.example.bfcfashion.common.AndyConstant;
 import com.example.bfcfashion.module.fragment.adapter.DealsAdapter;
 import com.example.bfcfashion.module.fragment.adapter.HomeAdapter;
 import com.example.bfcfashion.module.fragment.adapter.KidAdapter;
@@ -27,6 +28,8 @@ import com.example.bfcfashion.module.fragment.adapter.SliderAdapter;
 import com.example.bfcfashion.module.fragment.adapter.TrendingAdapter;
 import com.example.bfcfashion.module.fragment.adapter.WomenAdapter;
 import com.example.bfcfashion.module.model.DealsItem;
+import com.example.bfcfashion.module.model.GetBrand.BrandItem;
+import com.example.bfcfashion.module.model.GetBrand.GetBrandsResponse;
 import com.example.bfcfashion.module.model.KidItem;
 import com.example.bfcfashion.module.model.MensItem;
 import com.example.bfcfashion.module.model.NewItem;
@@ -37,6 +40,7 @@ import com.example.bfcfashion.module.model.categoryResponse.CatagoriesItem;
 import com.example.bfcfashion.module.model.categoryResponse.GetCategoryResponse;
 import com.google.android.material.tabs.TabLayout;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -63,22 +67,10 @@ public class HomeFragment extends Fragment {
     private ImageSlider slider;
 
     private Timer sliderTimer;
-    private TrendingAdapter trendingAdapter;
-    private List<TrendingItem> trendingItemList;
-    private List<DealsItem> dealsItemList;
-    private DealsAdapter dealsAdapter;
-    private List<NewItem> newItemList;
-    private NewAdapter newAdapter;
-    private MensAdapter mensAdapter;
-    private List<MensItem> mensItemList;
-    private WomenAdapter womenAdapter;
-    private List<WomensItem> womensItemList;
-    private List<KidItem> kidItemList;
     List<CatagoriesItem> categoryItemList;
-    private KidAdapter kidAdapter;
+    List<BrandItem> brandsItemList;
     private ViewPager viewPager;
     private TabLayout tabs;
-    private List<SliderItem> sliderItemList;
     private SliderAdapter adapter;
     private static final String TAG = "HomeFragment";
 
@@ -105,8 +97,9 @@ public class HomeFragment extends Fragment {
 
         slider = view.findViewById(R.id.slider);
 
-        sliderItemList = new ArrayList<>();
+        List<SliderItem> sliderItemList = new ArrayList<>();
         categoryItemList = new ArrayList<>();
+        brandsItemList = new ArrayList<>();
 //        viewPager = view.findViewById(R.id.viewPager);
 //
 //        layoutSliderIndicators = view.findViewById(R.id.layoutSliderIndicators);
@@ -134,7 +127,7 @@ public class HomeFragment extends Fragment {
         setCategoryRecyclerView(categoryItemList);*/
 
 
-        trendingItemList = new ArrayList<>();
+        List<TrendingItem> trendingItemList = new ArrayList<>();
         trendingItemList.add(new TrendingItem(R.drawable.trending_item, "Dorothy Perkins", "Evening Dress", "$20"));
         trendingItemList.add(new TrendingItem(R.drawable.trending_item, "Dorothy Perkins", "Evening Dress", "$30"));
         trendingItemList.add(new TrendingItem(R.drawable.trending_item, "Dorothy Perkins", "Evening Dress", "$40"));
@@ -145,31 +138,31 @@ public class HomeFragment extends Fragment {
 
         setTrendingRecycler(trendingItemList);
 
-        dealsItemList = new ArrayList<>();
+        List<DealsItem> dealsItemList = new ArrayList<>();
         dealsItemList.add(new DealsItem(R.drawable.under_199));
         dealsItemList.add(new DealsItem(R.drawable.under299));
         dealsItemList.add(new DealsItem(R.drawable.under_499));
         setDealsRecycler(dealsItemList);
 
-        newItemList = new ArrayList<>();
+        List<NewItem> newItemList = new ArrayList<>();
         newItemList.add(new NewItem(R.drawable.new_one, "OVS", "Blouse", "$12"));
         newItemList.add(new NewItem(R.drawable.new_two, "Mango Boy", "T-Shirt Sailing", "$20"));
         newItemList.add(new NewItem(R.drawable.new_two, "Cool", "Jeans", "$12"));
         setNewRecycler(newItemList);
 
-        mensItemList = new ArrayList<>();
+        List<MensItem> mensItemList = new ArrayList<>();
         mensItemList.add(new MensItem(R.drawable.mens_one, "Formal Shirts"));
         mensItemList.add(new MensItem(R.drawable.mens_two, "Party Wear"));
         mensItemList.add(new MensItem(R.drawable.mens_three, "Marriage Special"));
         setMensRecyclerView(mensItemList);
 
-        womensItemList = new ArrayList<>();
+        List<WomensItem> womensItemList = new ArrayList<>();
         womensItemList.add(new WomensItem(R.drawable.women_one, "Kurta"));
         womensItemList.add(new WomensItem(R.drawable.women_two, "Saree"));
         womensItemList.add(new WomensItem(R.drawable.women_three, "Off Shoulder"));
         setWomenRecyclerView(womensItemList);
 
-        kidItemList = new ArrayList<>();
+        List<KidItem> kidItemList = new ArrayList<>();
         kidItemList.add(new KidItem(R.drawable.kids_one, "Full Suit"));
         kidItemList.add(new KidItem(R.drawable.kids_one, "Coat"));
         kidItemList.add(new KidItem(R.drawable.kids_one, "Pent"));
@@ -177,6 +170,7 @@ public class HomeFragment extends Fragment {
 
         /*Get Categories from network call*/
         getCategories();
+        getBrand();
     }
 
     @Override
@@ -195,7 +189,7 @@ public class HomeFragment extends Fragment {
 
     private void setTrendingRecycler(List<TrendingItem> trendingItems) {
         trendingNowRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        trendingAdapter = new TrendingAdapter(getContext(), trendingItems);
+        TrendingAdapter trendingAdapter = new TrendingAdapter(getContext(), trendingItems);
         trendingNowRecyclerView.setAdapter(trendingAdapter);
         trendingAdapter.notifyDataSetChanged();
 
@@ -203,35 +197,35 @@ public class HomeFragment extends Fragment {
 
     private void setDealsRecycler(List<DealsItem> dealsItems) {
         dealsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        dealsAdapter = new DealsAdapter(getContext(), dealsItems);
+        DealsAdapter dealsAdapter = new DealsAdapter(getContext(), dealsItems);
         dealsRecyclerView.setAdapter(dealsAdapter);
         dealsAdapter.notifyDataSetChanged();
     }
 
     private void setNewRecycler(List<NewItem> newItems) {
         newRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        newAdapter = new NewAdapter(getContext(), newItems);
+        NewAdapter newAdapter = new NewAdapter(getContext(), newItems);
         newRecyclerView.setAdapter(newAdapter);
         newAdapter.notifyDataSetChanged();
     }
 
     private void setMensRecyclerView(List<MensItem> mensItems) {
         mensRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        mensAdapter = new MensAdapter(getContext(), mensItems);
+        MensAdapter mensAdapter = new MensAdapter(getContext(), mensItems);
         mensRecyclerView.setAdapter(mensAdapter);
         mensAdapter.notifyDataSetChanged();
     }
 
     private void setWomenRecyclerView(List<WomensItem> womensItems) {
         womenRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        womenAdapter = new WomenAdapter(getContext(), womensItems);
+        WomenAdapter womenAdapter = new WomenAdapter(getContext(), womensItems);
         womenRecyclerView.setAdapter(womenAdapter);
         womenAdapter.notifyDataSetChanged();
     }
 
     private void setKidsRecyclerView(List<KidItem> kidItems) {
         kidsRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
-        kidAdapter = new KidAdapter(getContext(), kidItems);
+        KidAdapter kidAdapter = new KidAdapter(getContext(), kidItems);
         kidsRecyclerView.setAdapter(kidAdapter);
         kidAdapter.notifyDataSetChanged();
     }
@@ -245,7 +239,7 @@ public class HomeFragment extends Fragment {
         RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
                 (new JSONObject(jsonObjectCategories)).toString());
 
-        Call<GetCategoryResponse> call = auth.getCategories("WAq+1EQS1fke69TTQz3C22KAVBwxiAcpQudOr4DVpeI=", body);
+        Call<GetCategoryResponse> call = auth.getCategories(AndyConstant.header, body);
         call.enqueue(new Callback<GetCategoryResponse>() {
             @Override
             public void onResponse(Call<GetCategoryResponse> call, Response<GetCategoryResponse> response) {
@@ -267,6 +261,37 @@ public class HomeFragment extends Fragment {
                 Log.e(TAG, "onFailure: " + t.getMessage());
             }
         });
+    }
 
+    private void getBrand() {
+        Auth auth = ApiClient.getRetrofitInstance().create(Auth.class);
+        Map<String, Object> jsonObjectCategories = new ArrayMap<>();
+        jsonObjectCategories.put("device_id", "1");
+        jsonObjectCategories.put("ip_address", "192.168.0.1");
+        RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
+                (new JSONObject(jsonObjectCategories)).toString());
+
+        Call<GetBrandsResponse> call = auth.getBrand(AndyConstant.header, body);
+        call.enqueue(new Callback<GetBrandsResponse>() {
+            @Override
+            public void onResponse(@NotNull Call<GetBrandsResponse> call, @NotNull Response<GetBrandsResponse> response) {
+                Log.d(TAG, "onResponse: " + response.code() + " " + response.body().getMsg());
+                if (response.body().isError()) {
+                } else if (!response.body().isError()) {
+                    brandsItemList.addAll(response.body().getBrand());
+                    if (categoryItemList.size() > 0) {
+                        setCategoryRecyclerView(categoryItemList);
+                    }
+                    Log.d(TAG, "onResponse: " + "Category Data Found");
+                } else {
+                    Log.d(TAG, "onResponse: Something went wrong");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetBrandsResponse> call, Throwable t) {
+                Log.e(TAG, "onFailure: " + t.getMessage());
+            }
+        });
     }
 }

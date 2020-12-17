@@ -11,6 +11,7 @@ public class GetCategoryResponse {
 
     @SerializedName("error")
     private boolean error;
+
     @SerializedName("msg")
     private String msg;
 

@@ -126,16 +126,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     private void goTOMain(String fullName, String email, String password, String etMobile) {
         Auth auth = ApiClient.getRetrofitInstance().create(Auth.class);
-        //SignUpDetail signUpDetail = new SignUpDetail(fullName, email, password);
-        /*{ "type_id" : 1,
-                "name": "Hasan",
-                "email": "abc@gmail.com",
-                "mobile": "8980591063",
-                "password": "123456",
-                "confirm_password": "123456",
-                "register_terms": 1,
-                "device_id": "1",
-                "ip_address": "192.168.0.1" }*/
+        //SignUpDetail signUpDetail = new SignUpDetail(fullName, email, password)
         Map<String, Object> jsonObjectLogin = new ArrayMap<>();
         jsonObjectLogin.put("type_id", "1");
         jsonObjectLogin.put("name", fullName);
@@ -148,9 +139,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         jsonObjectLogin.put("ip_address", "192.168.0.1");
         RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
                 (new JSONObject(jsonObjectLogin)).toString());
-
-        Call<SignUpResponse> call = auth.doSignUp("WAq+1EQS1fke69TTQz3C22KAVBwxiAcpQudOr4DVpeI=",
-                body);
+        Call<SignUpResponse> call = auth.doSignUp("WAq+1EQS1fke69TTQz3C22KAVBwxiAcpQudOr4DVpeI=", body);
         call.enqueue(new Callback<SignUpResponse>() {
             @Override
             public void onResponse(Call<SignUpResponse> call, Response<SignUpResponse> response) {

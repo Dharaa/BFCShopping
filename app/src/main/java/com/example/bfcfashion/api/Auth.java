@@ -1,5 +1,6 @@
 package com.example.bfcfashion.api;
 
+import com.example.bfcfashion.module.model.GetBrand.GetBrandsResponse;
 import com.example.bfcfashion.module.model.categoryResponse.GetCategoryResponse;
 import com.example.bfcfashion.module.model.login.LoginResponse;
 import com.example.bfcfashion.module.model.signup.SignUpResponse;
@@ -26,4 +27,8 @@ public interface Auth {
     @POST("?service=catagories&v=2.0&device-type=3")
     Call<GetCategoryResponse> getCategories(@Header("auth-key") String header,
                                             @Body RequestBody categoryDetails);
+
+    @POST("?service=brand&v=2.0&device-type=3")
+    Call<GetBrandsResponse> getBrand(@Header("auth-key") String header,
+                                     @Body RequestBody categoryDetails);
 }
