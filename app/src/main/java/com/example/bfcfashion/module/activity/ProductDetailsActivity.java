@@ -45,7 +45,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     private List<TrendingItem> trendingItemList;
     private TrendingAdapter trendingAdapter;
     private TextView tvSize, tvColors;
-    List<ColorsItem> colorItemList;
+    List<ColorsItem> colorItemList=new ArrayList<>();
     private static final String TAG = "ProductDetail";
 
     @Override
@@ -163,7 +163,8 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                                 (LinearLayout) findViewById(R.id.bottomSheetContainer)
                         );
                 RecyclerView colorListRv = bottomSheetView.findViewById(R.id.color_list);
-                colorListRv.setLayoutManager(new GridLayoutManager(this, 4));
+//                colorListRv.setLayoutManager(new GridLayoutManager(this, 4));
+                colorListRv.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
                 ColorAdapter colorAdapter = new ColorAdapter(ProductDetailsActivity.this, colorItemList);
                 colorListRv.setAdapter(colorAdapter);
                 colorAdapter.notifyDataSetChanged();

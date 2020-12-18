@@ -2,6 +2,7 @@ package com.example.bfcfashion.module.fragment.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,9 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.KidViewHolde
     @Override
     public void onBindViewHolder(@NonNull ColorAdapter.KidViewHolder holder, int position) {
 //        holder.ivColorsItem.setImageResource(ColorsItemList.get(position).get());
-        holder.ivColorsItem.setBackgroundColor(Color.parseColor(ColorsItemList.get(position).getColorCode()));
+        String color=ColorsItemList.get(position).getColorCode();
+        Log.d("TAGTAGTAGTAGTAG", "onBindViewHolder: "+color);
+//        holder.ivColorsItem.setBackgroundColor(Color.parseColor(color));
         holder.tvColorTitle.setText(ColorsItemList.get(position).getTitle());
     }
 
