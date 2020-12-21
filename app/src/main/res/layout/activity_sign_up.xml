@@ -16,35 +16,35 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_new_back" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:fontFamily="@font/metropolis_bold"
             android:text="@string/sign_up"
             android:textColor="@color/black"
-            android:textSize="34sp" />
+            android:textSize="@dimen/_26sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:background="@drawable/et_bg"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:text="@string/name"
                 android:textSize="@dimen/_10sdp" />
@@ -53,33 +53,33 @@
                 android:id="@+id/etFullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@null"
                 android:drawableEnd="@drawable/check"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:hint="@string/jphn_doe"
                 android:inputType="textPersonName"
                 android:paddingStart="0dp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:background="@drawable/et_bg"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:text="@string/email"
                 android:textSize="@dimen/_10sdp" />
@@ -88,33 +88,33 @@
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@null"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:hint="@string/xyz_gmail_com"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
                 android:paddingStart="0dp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:background="@drawable/et_bg"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:text="@string/mobile"
                 android:textSize="@dimen/_10sdp" />
@@ -123,26 +123,26 @@
                 android:id="@+id/etMobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@null"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:hint="+91 0797979879"
                 android:importantForAutofill="no"
                 android:inputType="phone"
                 android:paddingStart="0dp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:background="@drawable/et_bg"
             android:gravity="center"
             android:orientation="vertical">
@@ -152,16 +152,16 @@
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@null"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:paddingStart="0dp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
         <TextView
@@ -169,23 +169,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:fontFamily="@font/metropoli_medium"
             android:text="@string/already_have_an_account"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="@dimen/_12sdp"
             app:drawableEndCompat="@drawable/move_next" />
 
         <TextView
             android:id="@+id/tvSignUp"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
             android:background="@drawable/button_bg"
             android:elevation="@dimen/_5sdp"
             android:fontFamily="@font/metropoli_medium"
@@ -193,7 +193,7 @@
             android:text="@string/sign_up"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="@dimen/_12sdp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -203,13 +203,13 @@
             android:fontFamily="@font/metropoli_medium"
             android:text="@string/or_sign_up_with_social_account"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:textSize="@dimen/_12sdp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:orientation="horizontal">
 
             <ImageView

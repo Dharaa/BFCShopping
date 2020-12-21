@@ -14,7 +14,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|start"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_new_back" />
 
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|end"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:src="@drawable/ic_search" />
         </FrameLayout>
     </LinearLayout>
@@ -39,28 +39,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:fontFamily="@font/metropolis_bold"
-        android:text="Settings"
+        android:text="@string/settings"
         android:textColor="@color/black"
-        android:textSize="34sp" />
+        android:textSize="@dimen/_26sdp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/metropolis_semi_bold"
-            android:text="Personal Information"
+            android:text="@string/personal_information"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_14sdp" />
 
         <RelativeLayout
             android:layout_width="@dimen/_80sdp"
@@ -97,9 +97,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:background="@drawable/et_bg"
             android:gravity="center"
             android:orientation="vertical">
@@ -108,60 +108,60 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@null"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
-                android:hint="Full name"
-                android:paddingEnd="10dp"
-                android:textSize="14sp" />
+                android:hint="@string/full_name"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:background="@drawable/et_bg"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
-                android:text="Date of Birth"
-                android:textSize="11dp" />
+                android:text="@string/date_of_birth"
+                android:textSize="@dimen/_9sdp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@null"
-                android:drawablePadding="10dp"
+                android:drawablePadding="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:inputType="date"
-                android:paddingEnd="10dp"
+                android:paddingEnd="@dimen/_5sdp"
                 android:text="12/12/1989"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="@dimen/_30sdp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_semi_bold"
-                android:text="Password"
+                android:text="@string/password"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_12sdp" />
 
             <View
                 android:layout_width="match_parent"
@@ -173,38 +173,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropoli_medium"
-                android:text="Change"
-                android:textSize="14sp" />
+                android:text="@string/change"
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:background="@drawable/et_bg"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
-                android:text="Password"
-                android:textSize="11dp" />
+                android:text="@string/password"
+                android:textSize="@dimen/_9sdp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:background="@null"
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/metropoli_medium"
                 android:inputType="date"
-                android:paddingEnd="10dp"
+                android:paddingEnd="@dimen/_5sdp"
                 android:text="********"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
     </LinearLayout>

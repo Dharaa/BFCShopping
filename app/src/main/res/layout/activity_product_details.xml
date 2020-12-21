@@ -13,7 +13,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -21,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|start"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_new_back" />
 
@@ -31,15 +31,15 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:gravity="center"
-                android:text="Short dress"
+                android:text="@string/short_dress"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_16sdp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|end"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:src="@drawable/ic_share" />
         </FrameLayout>
     </LinearLayout>
@@ -57,58 +57,58 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/detailsPager"
                 android:layout_width="match_parent"
-                android:layout_height="413dp"
+                android:layout_height="@dimen/_330sdp"
                 android:orientation="horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tvSize"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="center|center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:layout_weight="1"
                     android:background="@drawable/details_size_bg"
-
                     android:drawableEnd="@drawable/ic_dropdown"
                     android:fontFamily="@font/metropoli_medium"
                     android:gravity="center_vertical"
-                    android:padding="10dp"
-                    android:text="Size"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/size"
                     android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/tvColors"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="center|center_vertical"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:layout_weight="1"
                     android:background="@drawable/details_size_bg"
                     android:drawableEnd="@drawable/ic_dropdown"
                     android:fontFamily="@font/metropoli_medium"
-                    android:padding="10dp"
-                    android:text="Black"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/black"
                     android:textColor="@color/black" />
 
                 <LinearLayout
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:background="@drawable/fav_button_bg"
-                    android:elevation="5dp"
+                    android:elevation="@dimen/_5sdp"
                     android:gravity="center"
-                    android:padding="10dp">
+                    android:padding="@dimen/_5sdp">
 
                     <ImageView
-                        android:layout_width="12dp"
-                        android:layout_height="14dp"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_13sdp"
                         android:src="@drawable/ic_favorite_border" />
                 </LinearLayout>
             </LinearLayout>
@@ -116,18 +116,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/metropolis_semi_bold"
-                    android:text="H&amp;M"
+                    android:text="@string/h_amp_m"
                     android:textColor="@color/black"
-                    android:textSize="24sp" />
+                    android:textSize="@dimen/_20sdp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -140,22 +140,22 @@
                     android:fontFamily="@font/metropolis_semi_bold"
                     android:text="$19.99"
                     android:textColor="@color/black"
-                    android:textSize="24sp" />
+                    android:textSize="@dimen/_20sdp" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Short black dress"
-                android:textSize="11sp" />
+                android:text="@string/short_black_dress"
+                android:textSize="@dimen/_9sdp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -172,36 +172,36 @@
                     android:id="@+id/tvRatingCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
                     android:fontFamily="@font/metropolis_regular"
                     android:text="(10)"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/_8sdp" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:fontFamily="@font/metropolis_regular"
-                android:lineHeight="20dp"
+                android:lineHeight="@dimen/_20sdp"
                 android:text="Short dress in soft cotton jersey with decorative buttons down the front and a wide, frill-trimmed square neckline with concealed elastication. Elasticated seam under the bust and short puff sleeves with a small frill trim."
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_12sdp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:background="#DAE0E2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -210,7 +210,7 @@
                     android:fontFamily="@font/metropolis_regular"
                     android:text="Item details"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -226,16 +226,16 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:background="#DAE0E2" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -244,7 +244,7 @@
                     android:fontFamily="@font/metropolis_regular"
                     android:text="Shipping info"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -260,24 +260,24 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:background="#DAE0E2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/metropolis_regular"
-                    android:text="Support"
+                    android:text="@string/support"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -293,14 +293,14 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:background="#DAE0E2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -308,53 +308,53 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/metropolis_bold"
-                    android:text="You can also like this"
+                    android:text="@string/you_can_also_like_this"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_16sdp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:fontFamily="@font/metropolis_regular"
                     android:gravity="end"
                     android:text="12 items"
                     android:textColor="@color/black"
-                    android:textSize="11sp" />
+                    android:textSize="@dimen/_9sdp" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/suggestionRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp" />
         </LinearLayout>
 
     </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="112dp"
+        android:layout_height="@dimen/_105sdp"
         android:background="@color/white"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvLogin"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
             android:background="@drawable/button_bg"
-            android:elevation="20dp"
+            android:elevation="@dimen/_15sdp"
             android:fontFamily="@font/metropoli_medium"
             android:gravity="center"
-            android:text="ADD TO CART"
+            android:text="@string/add_to_cart"
             android:textColor="@color/white"
-            android:textSize="14sp"></TextView>
+            android:textSize="@dimen/_12sdp"/>
     </LinearLayout>
 </LinearLayout>

@@ -16,11 +16,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
-            android:elevation="15dp">
+            android:elevation="@dimen/_10sdp">
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/_40sdp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -28,7 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|start"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_new_back" />
 
@@ -38,9 +38,9 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/metropolis_semi_bold"
                     android:gravity="center"
-                    android:text="Checkout"
+                    android:text="@string/checkout"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_16sdp" />
 
             </FrameLayout>
         </LinearLayout>
@@ -53,24 +53,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:fontFamily="@font/metropolis_semi_bold"
-                    android:text="Shipping address"
+                    android:text="@string/shipping_address"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    app:cardCornerRadius="10dp"
+                    android:layout_margin="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardUseCompatPadding="true">
 
                     <LinearLayout
@@ -81,9 +81,9 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
                             android:orientation="horizontal">
 
                             <TextView
@@ -91,9 +91,8 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/metropoli_medium"
                                 android:text="Jane Doe"
-
                                 android:textColor="@color/black"
-                                android:textSize="14sp" />
+                                android:textSize="@dimen/_12sdp" />
 
                             <View
                                 android:layout_width="match_parent"
@@ -105,18 +104,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/metropoli_medium"
-                                android:text="Change"
+                                android:text="@string/change"
                                 android:textColor="@color/blue"
-                                android:textSize="14sp" />
+                                android:textSize="@dimen/_12sdp" />
 
                         </LinearLayout>
 
                         <TextView
-                            android:layout_width="235dp"
+                            android:layout_width="@dimen/_180sdp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_15sdp"
                             android:text="3 Newbridge Court Chino Hills, CA 91709, United States" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -124,18 +123,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/metropoli_medium"
-                        android:text="Payment"
+                        android:text="@string/payment"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -146,44 +145,44 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/metropoli_medium"
-                        android:text="Change"
+                        android:text="@string/change"
                         android:textColor="@color/blue"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/ic_card" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
                         android:fontFamily="@font/metropolis_regular"
                         android:text="**** **** **** 3947"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:fontFamily="@font/metropolis_semi_bold"
-                    android:text="Delivery method"
+                    android:text="@string/delivery_method"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -192,19 +191,19 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="@dimen/_65sdp"
                         android:layout_weight="1"
                         android:src="@drawable/fedex" />
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="@dimen/_65sdp"
                         android:layout_weight="1"
                         android:src="@drawable/usps" />
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="@dimen/_65sdp"
                         android:layout_weight="1"
                         android:src="@drawable/dhl" />
                 </LinearLayout>
@@ -212,9 +211,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:orientation="vertical">
 
 
@@ -227,8 +226,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
-                            android:text="Order:"
-                            android:textSize="14sp" />
+                            android:text="@string/order"
+                            android:textSize="@dimen/_12sdp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -241,21 +240,21 @@
                             android:fontFamily="@font/metropolis_semi_bold"
                             android:text="112$"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="@dimen/_15sdp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
-                            android:text="Delivery:"
-                            android:textSize="14sp" />
+                            android:text="@string/delivery"
+                            android:textSize="@dimen/_12sdp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -268,21 +267,21 @@
                             android:fontFamily="@font/metropolis_semi_bold"
                             android:text="112$"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="@dimen/_15sdp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
-                            android:text="Summary:"
-                            android:textSize="14sp" />
+                            android:text="@string/summary"
+                            android:textSize="@dimen/_12sdp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -295,7 +294,7 @@
                             android:fontFamily="@font/metropolis_semi_bold"
                             android:text="112$"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -305,18 +304,18 @@
         <TextView
             android:id="@+id/tvSubmitOrder"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
             android:background="@drawable/button_bg"
-            android:elevation="20dp"
+            android:elevation="@dimen/_15sdp"
             android:fontFamily="@font/metropoli_medium"
             android:gravity="center"
             android:text="SUBMIT ORDER"
             android:textColor="@color/white"
-            android:textSize="14sp"></TextView>
+            android:textSize="@dimen/_12sdp" />
     </LinearLayout>
 </LinearLayout>

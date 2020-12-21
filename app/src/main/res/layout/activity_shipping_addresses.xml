@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:elevation="10dp">
+        android:elevation="@dimen/_10sdp">
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|start"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_new_back" />
 
@@ -34,9 +34,9 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:gravity="center"
-                android:text="Checkout"
+                android:text="@string/checkout"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_14sdp" />
 
         </FrameLayout>
     </LinearLayout>
@@ -44,7 +44,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="@dimen/_10sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,10 +54,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
@@ -68,9 +68,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -78,9 +78,8 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
                             android:text="Jane Doe"
-
                             android:textColor="@color/black"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/_12sdp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -91,38 +90,38 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
-                            android:text="Edit"
+                            android:text="@string/edit"
                             android:textColor="@color/blue"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/_12sdp" />
 
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="235dp"
+                        android:layout_width="@dimen/_180sdp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:text="3 Newbridge Court Chino Hills, CA 91709, United States" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="@font/metropolis_regular"
                         android:text="Use as the shipping address"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
@@ -133,9 +132,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -143,9 +142,8 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
                             android:text="Jane Doe"
-
                             android:textColor="@color/black"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/_12sdp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -156,38 +154,38 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
-                            android:text="Edit"
+                            android:text="@string/edit"
                             android:textColor="@color/blue"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/_12sdp" />
 
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="235dp"
+                        android:layout_width="@dimen/_180sdp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:text="3 Newbridge Court Chino Hills, CA 91709, United States" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="@font/metropolis_regular"
                         android:text="Use as the shipping address"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
@@ -198,9 +196,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -208,9 +206,8 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
                             android:text="Jane Doe"
-
                             android:textColor="@color/black"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/_12sdp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -221,40 +218,40 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropoli_medium"
-                            android:text="Edit"
+                            android:text="@string/edit"
                             android:textColor="@color/blue"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/_12sdp" />
 
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="235dp"
+                        android:layout_width="@dimen/_180sdp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:text="3 Newbridge Court Chino Hills, CA 91709, United States" />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="@font/metropolis_regular"
                         android:text="Use as the shipping address"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <ImageView
                 android:id="@+id/ivAddAddress"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_gravity="end"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:background="@drawable/forward_arrow_bg"
-                android:padding="5dp"
+                android:padding="@dimen/_5sdp"
                 android:src="@drawable/ic_plus" />
         </LinearLayout>
 

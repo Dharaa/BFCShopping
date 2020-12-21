@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:elevation="10dp">
+        android:elevation="@dimen/_10sdp">
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|start"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_new_back" />
 
@@ -33,9 +33,9 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:gravity="center"
-                android:text="Checkout"
+                android:text="@string/checkout"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_14sdp" />
 
         </FrameLayout>
     </LinearLayout>
@@ -51,11 +51,11 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_gravity="center"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:background="@drawable/et_bg"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -64,188 +64,189 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@null"
-                    android:drawablePadding="10dp"
+                    android:drawablePadding="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:hint="Full Name"
-                    android:paddingEnd="10dp"
+                    android:hint="@string/full_name"
+                    android:paddingEnd="@dimen/_5sdp"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:background="@drawable/et_bg"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:text="Address"
-                    android:textSize="11sp" />
+                    android:text="@string/address"
+                    android:textSize="@dimen/_10sdp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@null"
-                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/ic_right"
+                    android:drawablePadding="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:paddingEnd="10dp"
+                    android:paddingEnd="@dimen/_10sdp"
                     android:text="3 Newbridge Court"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:background="@drawable/et_bg"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:text="City"
-                    android:textSize="11sp" />
+                    android:text="@string/city"
+                    android:textSize="@dimen/_10sdp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@null"
-                    android:drawablePadding="10dp"
+                    android:drawablePadding="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:paddingEnd="10dp"
+                    android:paddingEnd="@dimen/_5sdp"
                     android:text="Chino Hills"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:background="@drawable/et_bg"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:text="State/Province/Region"
-                    android:textSize="11sp" />
+                    android:text="@string/state_province_region"
+                    android:textSize="@dimen/_10sdp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@null"
-                    android:drawablePadding="10dp"
+                    android:drawablePadding="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:paddingEnd="10dp"
+                    android:paddingEnd="@dimen/_5sdp"
                     android:text="California"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:background="@drawable/et_bg"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:text="Zip Code (Postal Code)"
-                    android:textSize="11sp" />
+                    android:text="@string/zip_code_postal_code"
+                    android:textSize="@dimen/_10sdp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@null"
-                    android:drawablePadding="10dp"
+                    android:drawablePadding="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:paddingEnd="10dp"
+                    android:paddingEnd="@dimen/_5sdp"
                     android:text="91709"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:background="@drawable/et_bg"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:text="Country"
-                    android:textSize="11sp" />
+                    android:text="@string/country"
+                    android:textSize="@dimen/_10sdp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:background="@null"
-                    android:drawablePadding="10dp"
+                    android:drawablePadding="@dimen/_5sdp"
                     android:fontFamily="@font/metropoli_medium"
-                    android:paddingEnd="10dp"
+                    android:paddingEnd="@dimen/_5sdp"
                     android:text="United States"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tvSignUp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_gravity="center"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:background="@drawable/button_bg"
-                android:elevation="5dp"
+                android:elevation="@dimen/_5sdp"
                 android:fontFamily="@font/metropoli_medium"
                 android:gravity="center"
-                android:text="SAVE ADDRESS"
+                android:text="@string/save_address"
                 android:textColor="@color/white"
-                android:textSize="14sp"></TextView>
+                android:textSize="@dimen/_12sdp"></TextView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

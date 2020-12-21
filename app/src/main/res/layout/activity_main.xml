@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/background"></FrameLayout>
+        android:background="@color/background" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_gravity="center"
         android:background="@drawable/ic_bottom_bg"
         android:gravity="center"
@@ -41,11 +41,11 @@
                 android:id="@+id/tvHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropolis_semi_bold"
-                android:text="Home"
+                android:text="@string/home"
                 android:textColor="@color/blue"
-                android:textSize="10sp" />
+                android:textSize="@dimen/_8sdp" />
 
         </LinearLayout>
 
@@ -68,10 +68,10 @@
                 android:id="@+id/tvShop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropolis_semi_bold"
-                android:text="Shop"
-                android:textSize="10sp" />
+                android:text="@string/shop"
+                android:textSize="@dimen/_8sdp" />
 
         </LinearLayout>
 
@@ -94,10 +94,10 @@
                 android:id="@+id/tvBag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropolis_semi_bold"
-                android:text="Bag"
-                android:textSize="10sp" />
+                android:text="@string/bag"
+                android:textSize="@dimen/_8sdp" />
 
         </LinearLayout>
 
@@ -120,10 +120,10 @@
                 android:id="@+id/tvFav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropolis_semi_bold"
-                android:text="Favorites"
-                android:textSize="10sp" />
+                android:text="@string/favorites"
+                android:textSize="@dimen/_8sdp" />
 
         </LinearLayout>
 
@@ -146,10 +146,10 @@
                 android:id="@+id/tvProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropolis_semi_bold"
-                android:text="Profile"
-                android:textSize="10sp" />
+                android:text="@string/profile"
+                android:textSize="@dimen/_8sdp" />
 
         </LinearLayout>
     </LinearLayout>
