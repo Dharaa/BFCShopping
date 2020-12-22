@@ -16,39 +16,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_search" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/metropolis_bold"
-            android:text="My profile"
+            android:text="@string/my_profile"
             android:textColor="@color/black"
-            android:textSize="34sp" />
+            android:textSize="@dimen/_28sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/profile" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:orientation="vertical">
 
                 <TextView
@@ -57,7 +57,7 @@
                     android:fontFamily="@font/metropolis_semi_bold"
                     android:text="Matilda Brown"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_16sdp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                     android:fontFamily="@font/metropoli_medium"
                     android:text="matildabrown@mail.com"
                     android:textColor="@color/grey"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -83,11 +83,11 @@
                 <LinearLayout
                     android:id="@+id/lvMyOrders"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="@dimen/_60sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -101,18 +101,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropolis_semi_bold"
-                            android:text="My orders"
+                            android:text="@string/my_orders"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_14sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/metropolis_regular"
-                            android:text="Completed, Pending, Cencelled orders"
+                            android:text="@string/completed_pending_cencelled_orders"
                             android:textColor="@color/grey"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/_9sdp" />
+
                     </LinearLayout>
 
                     <ImageView
@@ -120,8 +121,6 @@
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/ic_right" />
-
-
                 </LinearLayout>
 
                 <View
@@ -131,11 +130,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="@dimen/_60sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="16dp"
-
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -149,18 +147,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropolis_semi_bold"
-                            android:text="Shipping addresses"
+                            android:text="@string/shipping_addresses"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_14sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/metropolis_regular"
-                            android:text="Manage Shipping addresses"
+                            android:text="@string/manage_shipping_addresses"
                             android:textColor="@color/grey"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/_9sdp" />
                     </LinearLayout>
 
                     <ImageView
@@ -168,8 +166,6 @@
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/ic_right" />
-
-
                 </LinearLayout>
 
                 <View
@@ -179,11 +175,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="@dimen/_60sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="16dp"
-
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -199,16 +194,16 @@
                             android:fontFamily="@font/metropolis_semi_bold"
                             android:text="Promocodes"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_14sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/metropolis_regular"
-                            android:text="You have special promocodes"
+                            android:text="@string/you_have_special_promocodes"
                             android:textColor="@color/grey"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/_9sdp" />
                     </LinearLayout>
 
                     <ImageView
@@ -216,8 +211,6 @@
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/ic_right" />
-
-
                 </LinearLayout>
 
                 <View
@@ -228,10 +221,10 @@
                 <LinearLayout
                     android:id="@+id/lhSettings"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="@dimen/_60sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -245,18 +238,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/metropolis_semi_bold"
-                            android:text="Settings"
+                            android:text="@string/settings"
                             android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/_14sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:fontFamily="@font/metropolis_regular"
-                            android:text="Notifications, password"
+                            android:text="@string/notifications_password"
                             android:textColor="@color/grey"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/_9sdp" />
                     </LinearLayout>
 
                     <ImageView
@@ -264,7 +257,6 @@
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/ic_right" />
-
 
                 </LinearLayout>
 

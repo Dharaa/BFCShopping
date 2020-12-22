@@ -13,28 +13,27 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="6dp"
+            android:layout_height="@dimen/_5sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:src="@drawable/ic_topbar" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/metropolis_semi_bold"
-            android:text="Select size"
+            android:text="@string/select_size"
             android:textColor="@color/black"
-            android:textSize="18sp" />
-
+            android:textSize="@dimen/_14sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -42,18 +41,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Popular"
+                android:text="@string/popular"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
-
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -61,18 +59,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Newest"
+                android:text="@string/newest"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
-
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -80,18 +77,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Customer review"
+                android:text="@string/customer_review"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
-
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -99,18 +95,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Price: lowest to high"
+                android:text="@string/price_lowest_to_high"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
-
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -118,13 +113,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Price: highest to low"
+                android:text="@string/price_highest_to_low"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
-
+                android:textSize="@dimen/_12sdp" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 

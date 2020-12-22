@@ -20,27 +20,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_search" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:fontFamily="@font/metropolis_bold"
-                android:text="My Bag"
+                android:text="@string/my_bag"
                 android:textColor="@color/black"
-                android:textSize="34sp" />
+                android:textSize="@dimen/_28sdp" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:elevation="20dp"
+                android:elevation="@dimen/_15sdp"
                 android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -48,10 +48,10 @@
                     android:id="@+id/bagRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="16dp"
-                    android:elevation="20dp" />
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:elevation="@dimen/_15sdp" />
 
 
             </LinearLayout>
@@ -64,41 +64,41 @@
                 <LinearLayout
                     android:id="@+id/lhPromoCode"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/et_bg"
-                    android:elevation="5dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/et_bg_right_round"
+                    android:elevation="@dimen/_5sdp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="@dimen/_30sdp"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:background="@drawable/et_bg"
                         android:fontFamily="@font/metropoli_medium"
-                        android:hint="Enter your promo code"
-                        android:paddingStart="16dp"
+                        android:hint="@string/enter_your_promo_code"
+                        android:paddingStart="@dimen/_15sdp"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:background="@drawable/forward_arrow_bg"
                         android:contentDescription="@string/app_name"
-                        android:padding="5dp"
+                        android:padding="@dimen/_5sdp"
                         android:src="@drawable/ic_arrow_forward" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -106,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/metropoli_medium"
                         android:text="Total amount:"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_11sdp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -119,25 +119,25 @@
                         android:fontFamily="@font/metropolis_semi_bold"
                         android:text="124$"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="@dimen/_14sdp" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvCheckout"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
                     android:background="@drawable/button_bg"
-                    android:elevation="15dp"
+                    android:elevation="@dimen/_15sdp"
                     android:fontFamily="@font/metropoli_medium"
                     android:gravity="center"
-                    android:text="CHECK OUT"
+                    android:text="@string/check_out"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

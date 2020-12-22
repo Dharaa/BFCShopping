@@ -18,7 +18,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/_40sdp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -26,16 +26,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|start"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_new_back" />
-
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|end"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:src="@drawable/ic_search" />
             </FrameLayout>
         </LinearLayout>
@@ -44,17 +43,17 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/metropolis_bold"
-            android:text="Women’s tops"
+            android:text="@string/women_s_tops"
             android:textColor="@color/black"
-            android:textSize="34sp" />
+            android:textSize="@dimen/_28sdp" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="@dimen/_15sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,18 +63,18 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/tagsRecyclerView"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp" />
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:elevation="20dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:elevation="@dimen/_15sdp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -94,11 +93,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="6dp"
+                            android:layout_marginStart="@dimen/_5sdp"
                             android:fontFamily="@font/metropolis_regular"
-                            android:text="Filters"
+                            android:text="@string/filters"
                             android:textColor="@color/black"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/_9sdp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -120,11 +119,11 @@
 
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="6dp"
+                            android:layout_marginStart="@dimen/_5sdp"
                             android:fontFamily="@font/metropolis_regular"
-                            android:text="Price: lowest to high"
+                            android:text="@string/price_lowest_to_high"
                             android:textColor="@color/black"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/_9sdp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -136,11 +135,10 @@
 
                         <ImageView
                             android:id="@+id/ivGridToLinear"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
                             android:contentDescription="@string/app_name"
                             android:src="@drawable/ic_linear" />
-
 
                     </LinearLayout>
                 </LinearLayout>
@@ -149,10 +147,10 @@
                     android:id="@+id/favRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:elevation="20dp"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:elevation="@dimen/_15sdp" />
 
             </LinearLayout>
         </ScrollView>

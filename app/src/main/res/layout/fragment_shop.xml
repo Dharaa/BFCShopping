@@ -17,11 +17,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
-            android:elevation="15dp">
+            android:elevation="@dimen/_15sdp">
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/_40sdp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|start"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_new_back" />
 
@@ -39,16 +39,16 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/metropolis_semi_bold"
                     android:gravity="center"
-                    android:text="Categories"
+                    android:text="@string/categories"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <ImageView
                     android:id="@+id/ivSearch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|end"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:src="@drawable/ic_search" />
             </FrameLayout>
         </LinearLayout>
@@ -56,28 +56,27 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             app:tabIndicatorColor="@color/blue"
-            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorHeight="@dimen/_2sdp"
             app:tabSelectedTextColor="@color/black">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Women" />
+                android:text="@string/women" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Men" />
+                android:text="@string/men" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kids" />
+                android:text="@string/kids" />
         </com.google.android.material.tabs.TabLayout>
-
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/shopViewPager"

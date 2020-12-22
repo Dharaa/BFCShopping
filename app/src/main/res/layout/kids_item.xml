@@ -8,9 +8,9 @@
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="140dp"
-        android:layout_height="180dp"
-        app:cardCornerRadius="10dp">
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_140sdp"
+        app:cardCornerRadius="@dimen/_5sdp">
 
         <ImageView
             android:id="@+id/ivKidItem"
@@ -25,10 +25,10 @@
         android:id="@+id/tvKidOutfitTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:fontFamily="@font/metropolis_semi_bold"
         android:text="Kurta"
         android:textColor="@color/black"
-        android:textSize="13sp" />
+        android:textSize="@dimen/_12sdp" />
 </LinearLayout>

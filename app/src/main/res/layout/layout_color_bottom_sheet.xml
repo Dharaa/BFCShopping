@@ -13,20 +13,20 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="6dp"
+            android:layout_height="@dimen/_5sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:src="@drawable/ic_topbar" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/metropolis_semi_bold"
-            android:text="Select color"
+            android:text="@string/select_color"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_14sdp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/color_list"
@@ -34,28 +34,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:background="#DAE0E2" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Shipping info"
+                android:text="@string/shipping_info"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -73,25 +71,22 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:background="#DAE0E2" />
 
         <TextView
             android:id="@+id/tvLogin"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_margin="@dimen/_15sdp"
             android:background="@drawable/button_bg"
-            android:elevation="15dp"
+            android:elevation="@dimen/_15sdp"
             android:fontFamily="@font/metropoli_medium"
             android:gravity="center"
-            android:text="SELECT"
+            android:text="@string/select"
             android:textColor="@color/white"
-            android:textSize="14sp"></TextView>
+            android:textSize="@dimen/_12sdp"></TextView>
     </LinearLayout>
 
 </LinearLayout>
