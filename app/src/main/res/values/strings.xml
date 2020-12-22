@@ -7,7 +7,6 @@
     <string name="sign_up">Sign Up</string>
     <string name="name">Name</string>
     <string name="jphn_doe">Jphn Doe</string>
-    <string name="email">Email</string>
     <string name="xyz_gmail_com">xyz@gmail.com</string>
     <string name="password">Password</string>
     <string name="already_have_an_account">Already have an account?</string>
@@ -33,7 +32,6 @@
     <string name="zip_code_postal_code">Zip Code (Postal Code)</string>
     <string name="country">Country</string>
     <string name="save_address">SAVE ADDRESS</string>
-    <string name="brand">Brand</string>
     <string name="search">Search</string>
     <string name="shipping_address">Shipping address</string>
     <string name="change">Change</string>
@@ -58,7 +56,6 @@
     <string name="favorites">Favorites</string>
     <string name="profile">Profile</string>
     <string name="short_dress">Short dress</string>
-    <string name="black">Black</string>
     <string name="h_amp_m"><![CDATA[H&M]]></string>
     <string name="short_black_dress">Short black dress</string>
     <string name="support">Support</string>
