@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
+    android:layout_marginEnd="@dimen/_5sdp"
     android:padding="@dimen/_5sdp"
     android:gravity="center"
     android:orientation="vertical">
@@ -11,7 +11,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
-        app:cardCornerRadius="50dp">
+        app:cardCornerRadius="@dimen/_40sdp">
 
         <ImageView
             android:id="@+id/ivColorItem"
@@ -26,10 +26,10 @@
         android:id="@+id/tvColorTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:fontFamily="@font/metropolis_semi_bold"
         android:text="Kurta"
         android:textColor="@color/black"
-        android:textSize="13sp" />
+        android:textSize="@dimen/_10sdp" />
 </LinearLayout>

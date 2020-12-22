@@ -6,7 +6,7 @@
 
     <ImageView
         android:id="@+id/ivDeals"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/_155sdp"
+        android:layout_height="@dimen/_60sdp"
         android:src="@drawable/under_199" />
 </LinearLayout>
