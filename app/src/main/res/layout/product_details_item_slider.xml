@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="275dp"
+    android:layout_width="@dimen/_210sdp"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp">
+    android:layout_marginEnd="@dimen/_5sdp">
 
     <ImageView
         android:id="@+id/ivDetails"
-        android:layout_width="275dp"
-        android:layout_height="413dp"
+        android:layout_width="@dimen/_210sdp"
+        android:layout_height="@dimen/_320sdp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/details_one" />
 </LinearLayout>

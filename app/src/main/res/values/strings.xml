@@ -133,6 +133,15 @@
     <string name="off">OFF</string>
     <string name="personal_offer">Personal offer</string>
     <string name="shipping_info">Shipping info</string>
+    <string name="formal_shirts">Formal Shirts</string>
+    <string name="details">Details</string>
+    <string name="total_amount">Total Amount:</string>
+    <string name="quantity">Quantity:</string>
+    <string name="tracking_number">Tracking number:</string>
+    <string name="evening_dress">Evening Dress</string>
+    <string name="color">Color:</string>
+    <string name="size">Size:</string>
+    <string name="units">Units:</string>
 
     <array name="initial_slider_values">
         <item>20.0</item>

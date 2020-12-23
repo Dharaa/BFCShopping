@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="16dp"
-    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
     android:orientation="vertical">
 
     <FrameLayout
@@ -19,12 +19,12 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="@dimen/_8sdp">
 
                 <ImageView
                     android:id="@+id/ivNew"
-                    android:layout_width="150dp"
-                    android:layout_height="200dp"
+                    android:layout_width="@dimen/_116sdp"
+                    android:layout_height="@dimen/_155sdp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/new_one" />
             </androidx.cardview.widget.CardView>
@@ -36,31 +36,31 @@
             android:id="@+id/tvDiscountPercentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:background="@drawable/new_lable_bg"
             android:fontFamily="@font/metropolis_semi_bold"
-            android:padding="5dp"
+            android:padding="@dimen/_2sdp"
             android:text="new"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="11dp" />
+            android:textSize="@dimen/_9sdp" />
 
         <LinearLayout
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
             android:layout_gravity="bottom|end"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="@dimen/_45sdp"
             android:background="@drawable/fav_button_bg"
-            android:elevation="5dp"
+            android:elevation="@dimen/_5sdp"
             android:gravity="center"
-            android:padding="10dp"
+            android:padding="@dimen/_5sdp"
 
             >
 
             <ImageView
-                android:layout_width="12dp"
-                android:layout_height="14dp"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_12sdp"
                 android:src="@drawable/ic_favorite_border" />
         </LinearLayout>
 
@@ -68,14 +68,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="@dimen/_155sdp"
             android:gravity="bottom"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -92,10 +92,10 @@
                     android:id="@+id/tvRatingCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
                     android:fontFamily="@font/metropolis_regular"
                     android:text="(0)"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/_8sdp" />
             </LinearLayout>
 
             <TextView
@@ -105,22 +105,21 @@
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/metropolis_regular"
                 android:text="Dorothy Perkins"
-                android:textSize="11sp" />
+                android:textSize="@dimen/_9sdp" />
 
             <TextView
                 android:id="@+id/tvTrendingDressName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:fontFamily="@font/metropolis_semi_bold"
-                android:text="Evening Dress"
+                android:text="@string/evening_dress"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_12sdp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:orientation="horizontal">
 
 
@@ -131,7 +130,7 @@
                     android:fontFamily="@font/metropoli_medium"
                     android:text="$12"
                     android:textColor="@color/blue"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_11sdp" />
 
             </LinearLayout>
         </LinearLayout>

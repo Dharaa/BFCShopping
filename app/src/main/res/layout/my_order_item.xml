@@ -2,9 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="170dp"
-    android:layout_marginBottom="16dp"
-    app:cardCornerRadius="10dp">
+    android:layout_height="@dimen/_130sdp"
+    android:layout_marginBottom="@dimen/_15sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,9 +14,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:orientation="horizontal">
 
             <TextView
@@ -26,7 +26,7 @@
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:text="Order №1947034"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_13sdp" />
 
             <View
                 android:layout_width="match_parent"
@@ -39,16 +39,15 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
                 android:text="05-12-2019"
-
-                android:textSize="14sp" />
+                android:textSize="@dimen/_11sdp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:orientation="horizontal">
 
 
@@ -56,28 +55,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/metropolis_regular"
-                android:text="Tracking number:"
-
-                android:textSize="14sp" />
+                android:text="@string/tracking_number"
+                android:textSize="@dimen/_11sdp" />
 
             <TextView
                 android:id="@+id/tvTrackingNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:text="IW3475453455"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_11sdp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:orientation="horizontal">
 
 
@@ -91,19 +89,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/metropolis_regular"
-                    android:text="Quantity:"
+                    android:text="@string/quantity"
 
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_11sdp" />
 
                 <TextView
                     android:id="@+id/tvQuantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:fontFamily="@font/metropolis_semi_bold"
                     android:text="3"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_13sdp" />
             </LinearLayout>
 
             <LinearLayout
@@ -116,18 +114,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/metropolis_regular"
-                    android:text="Total Amount:"
-                    android:textSize="14sp" />
+                    android:text="@string/total_amount"
+                    android:textSize="@dimen/_11sdp" />
 
                 <TextView
                     android:id="@+id/tvTotalAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:fontFamily="@font/metropolis_semi_bold"
                     android:text="112$"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_13sdp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -135,21 +133,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvDetails"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:background="@drawable/details_txt_bg"
                 android:fontFamily="@font/metropoli_medium"
                 android:gravity="center"
-                android:text="Details"
+                android:text="@string/details"
                 android:textColor="@color/black"
-                android:textSize="14sp"></TextView>
+                android:textSize="@dimen/_11sdp"></TextView>
 
             <View
                 android:layout_width="match_parent"
@@ -163,7 +161,7 @@
                 android:fontFamily="@font/metropoli_medium"
                 android:text="Delivered"
                 android:textColor="@android:color/holo_green_dark"
-                android:textSize="14sp"></TextView>
+                android:textSize="@dimen/_11sdp"></TextView>
         </LinearLayout>
     </LinearLayout>
 

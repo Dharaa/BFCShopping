@@ -15,16 +15,16 @@
 
         <ImageView
             android:id="@+id/ivOrderItem"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/bag_item_one" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:orientation="vertical">
 
             <TextView
@@ -34,21 +34,21 @@
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:text="Pullover"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_14sdp" />
 
             <TextView
                 android:id="@+id/tvBrandName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:text="Mango"
-                android:textSize="11sp" />
+                android:textSize="@dimen/_10sdp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -60,8 +60,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/metropolis_regular"
-                        android:text="Color: "
-                        android:textSize="11sp" />
+                        android:text="@string/color"
+                        android:textSize="@dimen/_9sdp" />
 
                     <TextView
                         android:id="@+id/tvColorName"
@@ -70,13 +70,13 @@
                         android:fontFamily="@font/metropolis_regular"
                         android:text="Gray"
                         android:textColor="@color/black"
-                        android:textSize="11sp" />
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="@dimen/_30sdp"
                     android:layout_weight="2"
                     android:orientation="horizontal">
 
@@ -84,8 +84,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/metropolis_regular"
-                        android:text="Size: "
-                        android:textSize="11sp" />
+                        android:text="@string/size"
+                        android:textSize="@dimen/_9sdp" />
 
                     <TextView
                         android:id="@+id/tvSize"
@@ -94,14 +94,14 @@
                         android:fontFamily="@font/metropolis_regular"
                         android:text="L"
                         android:textColor="@color/black"
-                        android:textSize="11sp" />
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -113,8 +113,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/metropolis_regular"
-                        android:text="Units: "
-                        android:textSize="11sp" />
+                        android:text="@string/units"
+                        android:textSize="@dimen/_9sdp" />
 
                     <TextView
                         android:id="@+id/tvUnit"
@@ -123,19 +123,19 @@
                         android:fontFamily="@font/metropolis_regular"
                         android:text="1"
                         android:textColor="@color/black"
-                        android:textSize="11sp" />
+                        android:textSize="@dimen/_9sdp" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/tvPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="@dimen/_15sdp"
                     android:fontFamily="@font/metropoli_medium"
                     android:gravity="end"
                     android:text="51$"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
 

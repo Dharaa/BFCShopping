@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="170dp"
-    android:layout_height="285dp"
-    android:layout_marginTop="16dp"
+    android:layout_width="@dimen/_130sdp"
+    android:layout_height="@dimen/_220sdp"
+    android:layout_marginTop="@dimen/_15sdp"
     android:orientation="horizontal">
 
     <FrameLayout
@@ -13,12 +13,12 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="@dimen/_8sdp">
 
             <ImageView
                 android:id="@+id/ivOrderItem"
                 android:layout_width="match_parent"
-                android:layout_height="185dp"
+                android:layout_height="@dimen/_140sdp"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
                 android:src="@drawable/fav_one" />
@@ -26,26 +26,26 @@
 
 
         <LinearLayout
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
             android:layout_gravity="end"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="@dimen/_125sdp"
             android:background="@drawable/fav_button_bg"
-            android:elevation="10dp"
+            android:elevation="@dimen/_8sdp"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="@dimen/_5sdp">
 
             <ImageView
-                android:layout_width="12dp"
-                android:layout_height="14dp"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_12sdp"
                 android:src="@drawable/ic_favorite_border" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="@dimen/_145sdp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -67,20 +67,20 @@
                     android:id="@+id/tvRatingCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
                     android:fontFamily="@font/metropolis_regular"
                     android:text="(10)"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/_8sdp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tvBrandName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/metropolis_regular"
                 android:text="LIME"
-                android:textSize="11sp" />
+                android:textSize="@dimen/_9sdp" />
 
             <TextView
                 android:id="@+id/tvItemName"
@@ -89,7 +89,7 @@
                 android:fontFamily="@font/metropolis_semi_bold"
                 android:text="T-Shirt SPANISH"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_12sdp" />
 
 
             <TextView
@@ -99,7 +99,7 @@
                 android:fontFamily="@font/metropoli_medium"
                 android:text="9$"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/_11sdp" />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>
