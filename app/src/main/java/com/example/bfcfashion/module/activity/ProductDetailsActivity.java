@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.bfcfashion.R;
 import com.example.bfcfashion.api.ApiClient;
 import com.example.bfcfashion.api.Auth;
+import com.example.bfcfashion.auth.model.CreateProduct.CreateCategoryResponse;
 import com.example.bfcfashion.common.AndyConstant;
 import com.example.bfcfashion.module.fragment.adapter.ColorAdapter;
 import com.example.bfcfashion.module.fragment.adapter.ProductDetailsSliderAdapter;
@@ -46,6 +47,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     private TrendingAdapter trendingAdapter;
     private TextView tvSize, tvColors;
     List<ColorsItem> colorItemList=new ArrayList<>();
+    List<ColorsItem> productColorImageList=new ArrayList<>();
     private static final String TAG = "ProductDetail";
 
     @Override
@@ -133,6 +135,35 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
         });
     }
 
+    private void getProductColorsImage(String ColorCode) {
+        Auth auth = ApiClient.getRetrofitInstance().create(Auth.class);
+        Map<String, Object> jsonObjectCategories = new ArrayMap<>();
+        jsonObjectCategories.put("device_id", "1");
+        jsonObjectCategories.put("ip_address", "192.168.0.1");
+        RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
+                (new JSONObject(jsonObjectCategories)).toString());
+
+        Call<GetColorsResponse> call = auth.callProductColorImage(AndyConstant.header, body);
+        call.enqueue(new Callback<GetColorsResponse>() {
+            @Override
+            public void onResponse(Call<GetColorsResponse> call, Response<GetColorsResponse> response) {
+                Log.d(TAG, "onResponse: " + response.code() + " " + response.body().getMsg());
+                if (response.body().isError()) {
+                } else if (!response.body().isError()) {
+                    productColorImageList.addAll(response.body().getColor());
+                    Log.d(TAG, "onResponse: " + "Category Data Found");
+                } else {
+                    Log.d(TAG, "onResponse: Something went wrong");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetColorsResponse> call, Throwable t) {
+                Log.e(TAG, "onFailure: " + t.getMessage());
+            }
+        });
+    }
+
     private void setColorsRecyclerView(List<ColorsItem> categoryItemList) {
 
     }
@@ -165,7 +196,14 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                 RecyclerView colorListRv = bottomSheetView.findViewById(R.id.color_list);
 //                colorListRv.setLayoutManager(new GridLayoutManager(this, 4));
                 colorListRv.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-                ColorAdapter colorAdapter = new ColorAdapter(ProductDetailsActivity.this, colorItemList);
+//                ColorAdapter colorAdapter = new ColorAdapter(ProductDetailsActivity.this, colorItemList,new ColorAdapter.clickListener);
+
+                final ColorAdapter colorAdapter = new ColorAdapter(this, colorItemList, new ColorAdapter.clickListener() {
+                    @Override
+                    public void onItemClick(ColorsItem contact) {
+                        getProductColorsImage(contact.getColorCode());
+                    }
+                });
                 colorListRv.setAdapter(colorAdapter);
                 colorAdapter.notifyDataSetChanged();
 

@@ -21,9 +21,16 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.KidViewHolde
     private Context context;
     private List<ColorsItem> ColorsItemList;
 
-    public ColorAdapter(Context context, List<ColorsItem> ColorsItemList) {
+    private clickListener listener;
+
+    public interface clickListener {
+        void onItemClick(ColorsItem contact);
+    }
+
+    public ColorAdapter(Context context, List<ColorsItem> ColorsItemList,clickListener listener) {
         this.context = context;
         this.ColorsItemList = ColorsItemList;
+        this.listener = listener;
     }
 
     @NonNull

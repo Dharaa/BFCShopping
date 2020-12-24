@@ -1,5 +1,6 @@
 package com.example.bfcfashion.api;
 
+import com.example.bfcfashion.auth.model.CreateProduct.CreateCategoryResponse;
 import com.example.bfcfashion.module.model.ColorsResponse.GetColorsResponse;
 import com.example.bfcfashion.module.model.GetBrand.GetBrandsResponse;
 import com.example.bfcfashion.module.model.categoryResponse.GetCategoryResponse;
@@ -14,7 +15,7 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface Auth {
-//region
+    //region
     @Headers({"Content-Type: application/json"})
     @POST("?service=user-login&v=2.0&device-type=3.0")
     Call<LoginResponse> doLogin(@Header("auth-key") String header,
@@ -55,5 +56,26 @@ public interface Auth {
 //    @POST("?service=create-size&&v=2.0&device-type=3")
 //    Call<CreateSizeResponse> callCreateSize(@Header("auth-key") String header,
 //                                            @Body RequestBody createSize);
+
+
+    @POST("?service=create-products&&v=2.0&device-type=3")
+    Call<CreateCategoryResponse> callCreateProduct(@Header("auth-key") String header,
+                                                   @Body RequestBody createCategory);
+
+    @POST("?Banners")
+    Call<CreateCategoryResponse> callBanners(@Header("auth-key") String header,//optional
+                                             @Body RequestBody banners);
+
+    @POST("?products")
+    Call<CreateCategoryResponse> callProduct(@Header("auth-key") String header,//optional
+                                             @Body RequestBody products);
+
+    @POST("?product-brands")
+    Call<CreateCategoryResponse> callProductBrands(@Header("auth-key") String header,//optional
+                                                   @Body RequestBody product_brands);
+
+    @POST("?product-colors-images")
+    Call<GetColorsResponse> callProductColorImage(@Header("auth-key") String header,//optional
+                                                       @Body RequestBody product_color_image);
 
 }
