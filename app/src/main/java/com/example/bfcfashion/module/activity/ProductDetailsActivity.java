@@ -138,8 +138,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
     private void getProductColorsImage(String ColorCode) {
         Auth auth = ApiClient.getRetrofitInstance().create(Auth.class);
         Map<String, Object> jsonObjectCategories = new ArrayMap<>();
-        jsonObjectCategories.put("device_id", "1");
-        jsonObjectCategories.put("ip_address", "192.168.0.1");
+        jsonObjectCategories.put("color-id", ColorCode);
         RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),
                 (new JSONObject(jsonObjectCategories)).toString());
 
@@ -148,13 +147,13 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
             @Override
             public void onResponse(Call<GetColorsResponse> call, Response<GetColorsResponse> response) {
                 Log.d(TAG, "onResponse: " + response.code() + " " + response.body().getMsg());
-                if (response.body().isError()) {
-                } else if (!response.body().isError()) {
-                    productColorImageList.addAll(response.body().getColor());
-                    Log.d(TAG, "onResponse: " + "Category Data Found");
-                } else {
-                    Log.d(TAG, "onResponse: Something went wrong");
-                }
+//                if (response.body().isError()) {
+//                } else if (!response.body().isError()) {
+//                    productColorImageList.addAll(response.body().getColor());
+//                    Log.d(TAG, "onResponse: " + "Category Data Found");
+//                } else {
+//                    Log.d(TAG, "onResponse: Something went wrong");
+//                }
             }
 
             @Override

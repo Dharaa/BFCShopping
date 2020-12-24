@@ -9,7 +9,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     //    private static final String BASE_URL = "http://bfc-fashion.astechnolabs.com/api/index.php/";
-    private static final String BASE_URL = "http://www.astechnolabs.com/api-bfc-fashion.astechnolabs.com/api/";
+//    private static final String BASE_URL = "http://www.astechnolabs.com/api-bfc-fashion.astechnolabs.com/api/";
+    private static final String BASE_URL = "http://www.astechnolabs.com/api-bfc-fashion.astechnolabs.com";
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance() {

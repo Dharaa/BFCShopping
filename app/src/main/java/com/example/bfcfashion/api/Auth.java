@@ -15,67 +15,83 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface Auth {
+    public static String CONTENT_TYPE = "Content-Type: application/json";
+    public static String Register = "/api/?service=user-registration&v=2.0&device-type=3";
+    public static String Login = "/api/?service=user-login&v=2.0&device-type=3.0";
+    public static String CreateCategory = "/api/?service=create-catagory&v=2.0&device-type=3";
+    public static String GetCategories = "/api/?service=catagories&v=2.0&device-type=3";
+    public static String CreateBrands = "/api/?service=create-brands&v=2.0&device-type=3";
+    public static String GetBrand = "/api/?service=brand&v=2.0&device-type=3";
+    public static String CreateColors = "/api/?service=create-colors&v=2.0&device-type=3";
+    public static String GetColors = "/api/?service=colors&v=2.0&device-type=3";
+    public static String CreateSize = "/api/?service=create-size&&v=2.0&device-type=3";
+    public static String CreateProducts = "/api/?service=create-products&&v=2.0&device-type=3";
+        public static String Banners = "?Banners";
+    public static String products = "?products";
+    public static String ProductsBrands = "?product-brands";
+        public static String ProductColorsImages = "?product-colors-images";
+
     //region
-    @Headers({"Content-Type: application/json"})
-    @POST("?service=user-login&v=2.0&device-type=3.0")
+    @Headers({CONTENT_TYPE})
+    @POST(Login)
     Call<LoginResponse> doLogin(@Header("auth-key") String header,
                                 @Body RequestBody loginDetail);
 
-    @Headers({"Content-Type: application/json"})
-    @POST("?service=user-registration&v=2.0&device-type=3.0")
+    @Headers({CONTENT_TYPE})
+    @POST(Register)
     Call<SignUpResponse> doSignUp(@Header("auth-key") String header,
                                   @Body RequestBody loginDetail);
 
 
-//    @POST("?service=create-catagory&v=2.0&device-type=3")
+//    @POST(CreateCategory)
 //    Call<CreateCategoryResponse> callCreateCategory(@Header("auth-key") String header,
 //                                            @Body RequestBody createCategory);
 
 
-    @POST("?service=catagories&v=2.0&device-type=3")
+    @POST(GetCategories)
     Call<GetCategoryResponse> getCategories(@Header("auth-key") String header,
                                             @Body RequestBody categoryDetails);
 
 
-//    @POST("?service=create-brands&v=2.0&device-type=3")
+//    @POST(CreateBrands)
 //    Call<CreateBrandResponse> callCreateBrand(@Header("auth-key") String header,
 //                                            @Body RequestBody createBrand);
 
-    @POST("?service=brand&v=2.0&device-type=3")
+    @POST(GetBrand)
     Call<GetBrandsResponse> getBrand(@Header("auth-key") String header,
                                      @Body RequestBody categoryDetails);
 
-//    @POST("?service=create-colors&v=2.0&device-type=3")
+//    @POST(CreateColors)
 //    Call<CreateColorsResponse> callCreateColors(@Header("auth-key") String header,
 //                                            @Body RequestBody createColors);
 
-    @POST("?service=colors&v=2.0&device-type=3")
+    @POST(GetColors)
     Call<GetColorsResponse> getColors(@Header("auth-key") String header,
                                       @Body RequestBody ColorsDetail);
 
-//    @POST("?service=create-size&&v=2.0&device-type=3")
+//    @POST(CreateSize)
 //    Call<CreateSizeResponse> callCreateSize(@Header("auth-key") String header,
 //                                            @Body RequestBody createSize);
 
 
-    @POST("?service=create-products&&v=2.0&device-type=3")
+    @POST(CreateProducts)
     Call<CreateCategoryResponse> callCreateProduct(@Header("auth-key") String header,
                                                    @Body RequestBody createCategory);
 
-    @POST("?Banners")
+    @POST(Banners)
     Call<CreateCategoryResponse> callBanners(@Header("auth-key") String header,//optional
                                              @Body RequestBody banners);
 
-    @POST("?products")
+    @POST(products)
     Call<CreateCategoryResponse> callProduct(@Header("auth-key") String header,//optional
                                              @Body RequestBody products);
 
-    @POST("?product-brands")
+    @POST(ProductsBrands)
     Call<CreateCategoryResponse> callProductBrands(@Header("auth-key") String header,//optional
                                                    @Body RequestBody product_brands);
 
-    @POST("?product-colors-images")
-    Call<GetColorsResponse> callProductColorImage(@Header("auth-key") String header,//optional
-                                                       @Body RequestBody product_color_image);
+    @POST(ProductColorsImages)
+    Call<GetColorsResponse> callProductColorImage(@Header("auth-key") String header,
+                                                  @Body RequestBody product_color_image);
 
 }
